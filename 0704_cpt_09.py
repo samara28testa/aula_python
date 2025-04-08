@@ -1,3 +1,5 @@
+# Compinti per creare log
+
 nome = ""
 password = ""
 id = 0
