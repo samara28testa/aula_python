@@ -6,7 +6,7 @@ import numpy as np
 
 arr = np.array([10, 11, 12, 13, 14, 15, 20, 21, 22, 23, 24, 25, 30, 35, 40, 45, 46, 47, 48, 50])
 
-#L'array originale
+# L'array originale
 print(arr)
 
 # Slicing 10 primi
