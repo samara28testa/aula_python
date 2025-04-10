@@ -1,0 +1,25 @@
+SELECT nome, eta
+FROM Studenti
+WHERE eta > 18 AND eta <= 20;
+
+SELECT *
+FROM Studenti
+WHERE eta > 18 AND eta <= 20;
+
+SELECT *
+FROM Studenti
+ORDER BY eta DESC;
+
+SELECT *
+FROM Studenti
+ORDER BY eta ASC;
+
+SELECT nome, eta
+FROM Studenti
+WHERE nome LIKE 'M%';
+
+SELECT nome, eta
+FROM Studenti
+WHERE corso = 'Informatica';
+
+
