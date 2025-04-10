@@ -20,12 +20,18 @@ class Data_1:
     
     def __init__(self):
         self.arr_1 = np.linspace(0, 10, 50)
-
+        
+    def stampa_arr_1(self):
+        print("Array di Data_1:", self.arr_1)
+  
 
 class Data_2:
 
     def __init__(self):
         self.arr_2 = np.random.rand(50)
+        
+    def stampa_arr_2(self):
+        print("Array di Data_2:", self.arr_2)
         
     def somma(self, data1):
         somma_arr_3 = data1.arr_1 + self.arr_2
@@ -39,6 +45,9 @@ class Data_2:
     
 d1 = Data_1()
 d2 = Data_2()
+
+d1.stampa_arr_1()
+d2.stampa_arr_2()
 
 risultato = d2.somma(d1)
 risultato_magg = d2.somma_magg_5(risultato)
