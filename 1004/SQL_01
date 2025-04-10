@@ -22,4 +22,36 @@ SELECT nome, eta
 FROM Studenti
 WHERE corso = 'Informatica';
 
+SELECT nome, eta
+FROM Studenti
+WHERE eta BETWEEN 22 AND 25;
+
+SELECT *
+FROM Studenti
+ORDER BY corso, eta DESC;
+
+SELECT *
+FROM Studenti
+WHERE nome LIKE '%a%'
+ORDER BY corso, eta DESC;
+
+SELECT corso, COUNT(corso) as quantità
+FROM Studenti
+GROUP BY corso;
+
+SELECT corso, COUNT(corso) as quantità
+FROM Studenti
+GROUP BY corso
+ORDER BY quantità;
+
+INSERT INTO Studenti(nome, eta, corso)
+VALUES ('Bruno', 25, 'Informatica');
+
+INSERT INTO Studenti
+VALUES (13, 'Giulio', 25, 'Informatica');
+
+UPDATE Studenti
+SET nome = 'Carlo'
+WHERE nome = 'Bruno';
+
 
