@@ -1,0 +1,31 @@
+-- Esercizio
+
+--SELECT Prodotti.nome, Prodotti.categoria, Prodotti.marca, Prodotti.prezzo, Prodotti.fornitore_id, Fornitori.nome, Fornitori.paese
+--FROM Prodotti
+--LEFT JOIN Fornitori ON Prodotti.fornitore_id = Fornitori.id;
+
+--SELECT Prodotti.nome, Prodotti.categoria, Prodotti.marca, Prodotti.prezzo, Prodotti.fornitore_id, Fornitori.nome, Fornitori.paese
+--FROM Prodotti
+--LEFT JOIN Fornitori ON Prodotti.fornitore_id = Fornitori.id
+--WHERE Prodotti.prezzo > 300;
+
+--SELECT Prodotti.nome, Prodotti.categoria, Prodotti.marca, Prodotti.prezzo, COUNT(Prodotti.fornitore_id) AS quantita_prodoti, Fornitori.nome, Fornitori.paese
+--FROM Prodotti
+--LEFT JOIN Fornitori ON Prodotti.fornitore_id = Fornitori.id
+--GROUP BY Fornitori.nome;
+
+--SELECT Prodotti.nome, Prodotti.categoria, Prodotti.marca, Prodotti.prezzo, Prodotti.fornitore_id, Fornitori.nome, Fornitori.paese
+--FROM Prodotti
+--LEFT JOIN Fornitori ON Prodotti.fornitore_id = Fornitori.id
+--WHERE Fornitori.paese = 'Italia';
+
+--SELECT Prodotti.nome, Prodotti.categoria, Prodotti.marca, Prodotti.prezzo, Prodotti.fornitore_id, Fornitori.nome, Fornitori.paese
+--FROM Prodotti
+--LEFT JOIN Fornitori ON Prodotti.fornitore_id = Fornitori.id
+--WHERE Prodotti.categoria = 'Informatica';
+
+SELECT Prodotti.nome, Prodotti.categoria, Prodotti.marca, AVG(Prodotti.prezzo) AS prezzo_medio, Prodotti.fornitore_id, Fornitori.nome, Fornitori.paese
+FROM Prodotti
+LEFT JOIN Fornitori ON Prodotti.fornitore_id = Fornitori.id
+WHERE Fornitori.nome = 'TechGlobal';
+
