@@ -1,1 +1,73 @@
+__Utilizzo di UPDATE__
+
+UPDATE Clienti
+SET nome = 'Pedro', nazione = 'Brasile'
+WHERE id = 1;
+
+
+__ Utilizzo di DELETE__
+
+DELETE FROM Clienti
+WHERE id = 50;
+
+DELETE FROM Clienti
+WHERE id = 1;
+
+__ Utilizzo di LIMIT__
+
+SELECT *
+FROM Clienti
+LIMIT 10;
+
+__ Utilizzo di Min__
+SELECT nome, nazione, MIN(soldi) AS min_soldi
+FROM Clienti
+WHERE nazione = 'Italia';c
+
+__ Utilizzo di Max__
+
+SELECT nome, nazione, MAX(soldi) AS max_soldi
+FROM Clienti
+WHERE nazione = 'Italia';
+
+
+__ Utilizo calcolo__
+
+SELECT nome, nazione, AVG(soldi) AS media_soldi
+FROM Clienti
+WHERE nazione = 'Italia';
+
+SELECT nome, nazione, SUM(soldi) AS somma_soldi
+FROM Clienti
+WHERE nazione = 'Brasile';
+
+SELECT  corso, COUNT(corso) AS quantita
+FROM Studenti
+GROUP BY corso;
+
+SELECT  nazione, COUNT(nazione) AS quantita
+FROM Clienti
+GROUP BY nazione;
+
+__ Utilizzo di LIKE__
+SELECT  *
+FROM Clienti
+WHERE nazione LIKE 'a%';
+
+__ Utilizzo di IN __
+
+SELECT  *
+FROM Clienti
+WHERE nazione IN ('Italia', 'Francia');
+
+__ Utilizzo di NOT IN __
+SELECT  *
+FROM Clienti
+WHERE nazione NOT IN ('Italia', 'Francia');
+
+__ Utilizzo di Between__
+
+SELECT  *
+FROM Clienti
+WHERE soldi BETWEEN 800 AND 1500;
 
