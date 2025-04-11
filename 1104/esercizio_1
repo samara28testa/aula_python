@@ -1,0 +1,32 @@
+
+--Esercizio--
+--Visualizza lintera tabella Auto--
+
+--SELECT *
+--From Auto;
+
+-- Inserisce almeno 5 nuove auto con prezzo superiore a 10000 --
+
+--INSERT INTO Auto (marca, modello, anno, prezzo)
+--VALUES ('Audi', 'A2', 2015, 11000), ('Fiat', 'Topolino', 2025, 10000), ('Honda', 'Civic', 2015, 15000), ('Kia','Picanto', 2023, 12000), ('Nissan', 'Micra', 2020, 10000);
+
+-- Seleziona tutte le auto con prezzo superiore a 10000
+
+--SELECT*
+--FROM Auto
+--WHERE prezzo >= 10000;
+
+-- Ordina le auto per anno di produzione
+
+--SELECT *
+--FROM auto
+--ORDER BY anno DESC;
+
+-- Modifica tutti i prezzo 
+
+--SELECT marca, modello, anno, prezzo, prezzo * 1.10 AS prezzo_nuovo
+--FROM Auto;
+
+SELECT *
+FROM Auto
+WHERE prezzo >5000;
