@@ -81,3 +81,34 @@ SELECT Orders.order_id, Orders.item, Customers.customer_id, Customers.first_name
 FROM Orders
 LEFT JOIN Customers ON Orders.customer_id = Customers. Customer_id;
 
+CREATE TABLE Persons (
+  PersonID int,
+  LastName varchar (255),
+  FirstName varchar(255),
+  Address varchar (255),
+  City varchar (255)
+);
+
+CREATE TABLE Persons (
+  ID int NOT NULL, 
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int
+);
+
+CREATE TABLE Persons_2 (
+  ID int NOT NULL, 
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int,
+UNIQUE (ID)
+);
+
+CREATE TABLE Persons_4 (
+  ID int NOT NULL, 
+  LastName varchar(255) NOT NULL,
+  FirstName varchar(255),
+  Age int,
+PRIMARY KEY (ID));
+
+
